@@ -1,7 +1,4 @@
-function record(){
-     //const timeMS = document.getElementById('input-time').value;
-     //const videoTitle = document.getElementById('input-title').value;
-    
+function record(){  
      const videoTitle = "record";
     
      if(navigator.mediaDevices){
@@ -23,10 +20,6 @@ function record(){
                 videoRecorder.start();
 
                 document.getElementById('btn-stop-record').addEventListener('click', () => {videoRecorder.stop();})
-                /*setTimeout(() => {
-                    videoRecorder.stop();
-                    console.log("Gravação terminou");
-                }, timeMS);*/
 
                 videoRecorder.onstop = e => {
                     var blob = new Blob(video, {
